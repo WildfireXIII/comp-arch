@@ -506,47 +506,54 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <path d="M91,46 Q95,56 99,46" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="30" stroke="#000000" stroke-width="2" width="30" x="80" y="45"/>
+      <circ-port height="8" pin="200,110" width="8" x="76" y="46"/>
+      <circ-port height="8" pin="200,150" width="8" x="76" y="56"/>
+      <circ-port height="8" pin="200,240" width="8" x="76" y="66"/>
+      <circ-port height="10" pin="630,150" width="10" x="105" y="45"/>
+      <circ-port height="10" pin="630,220" width="10" x="105" y="55"/>
+      <circ-anchor facing="east" height="6" width="6" x="107" y="47"/>
+    </appear>
+    <wire from="(200,240)" to="(400,240)"/>
     <wire from="(420,130)" to="(420,220)"/>
     <wire from="(310,110)" to="(310,180)"/>
     <wire from="(280,220)" to="(340,220)"/>
     <wire from="(200,110)" to="(310,110)"/>
     <wire from="(280,150)" to="(280,220)"/>
-    <wire from="(190,240)" to="(400,240)"/>
     <wire from="(400,240)" to="(400,260)"/>
     <wire from="(500,240)" to="(540,240)"/>
     <wire from="(400,260)" to="(450,260)"/>
     <wire from="(310,180)" to="(340,180)"/>
-    <wire from="(640,220)" to="(640,240)"/>
     <wire from="(390,200)" to="(540,200)"/>
     <wire from="(310,110)" to="(330,110)"/>
     <wire from="(200,150)" to="(280,150)"/>
     <wire from="(420,130)" to="(490,130)"/>
-    <wire from="(190,220)" to="(190,240)"/>
-    <wire from="(590,220)" to="(640,220)"/>
+    <wire from="(590,220)" to="(630,220)"/>
     <wire from="(280,150)" to="(330,150)"/>
     <wire from="(550,150)" to="(630,150)"/>
     <wire from="(390,130)" to="(420,130)"/>
     <wire from="(420,220)" to="(450,220)"/>
     <wire from="(400,170)" to="(490,170)"/>
     <wire from="(400,170)" to="(400,240)"/>
+    <comp lib="0" loc="(630,220)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="C"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="0" loc="(200,150)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="B"/>
-    </comp>
-    <comp lib="0" loc="(190,220)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="C"/>
     </comp>
     <comp lib="1" loc="(550,150)" name="XOR Gate">
       <a name="inputs" val="2"/>
       <a name="label" val="- xor z"/>
     </comp>
-    <comp lib="0" loc="(640,240)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
+    <comp lib="0" loc="(200,240)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="label" val="C"/>
-      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="1" loc="(390,200)" name="AND Gate">
       <a name="inputs" val="2"/>
@@ -924,6 +931,78 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="1" loc="(400,280)" name="NOR Gate">
       <a name="inputs" val="2"/>
       <a name="label" val="4"/>
+    </comp>
+  </circuit>
+  <circuit name="D Flip-Flop explanation">
+    <a name="circuit" val="D Flip-Flop explanation"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(240,180)" to="(240,230)"/>
+    <wire from="(190,170)" to="(280,170)"/>
+    <wire from="(420,170)" to="(480,170)"/>
+    <wire from="(360,180)" to="(390,180)"/>
+    <wire from="(360,180)" to="(360,230)"/>
+    <wire from="(240,230)" to="(280,230)"/>
+    <wire from="(310,170)" to="(390,170)"/>
+    <wire from="(190,230)" to="(240,230)"/>
+    <wire from="(240,180)" to="(280,180)"/>
+    <wire from="(310,230)" to="(360,230)"/>
+    <comp lib="6" loc="(988,251)" name="Text">
+      <a name="text" val="While expensive to make, (8 NOR gates for 1 bit of memory) it is fast and reliable"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="6" loc="(962,274)" name="Text">
+      <a name="text" val="Referred to as SRAM (Static Random Access Memory) used for CPU cache"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="6" loc="(352,167)" name="Text">
+      <a name="text" val="Y"/>
+    </comp>
+    <comp lib="6" loc="(413,337)" name="Text">
+      <a name="text" val="When clock is 1, whatever Data is propagates to Y, (but Q is not yet affected,"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="6" loc="(392,357)" name="Text">
+      <a name="text" val="because the enable to D-Slave is now off) Once the clock flips back to 0"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="6" loc="(1007,89)" name="Text">
+      <a name="text" val="D Flip-Flop"/>
+      <a name="font" val="SansSerif bold 40"/>
+      <a name="valign" val="top"/>
+    </comp>
+    <comp lib="6" loc="(398,320)" name="Text">
+      <a name="text" val="When clock is 0, Data isn't affecting Y, since the enable to D-Master is off"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp loc="(310,170)" name="D-Latch">
+      <a name="label" val="D-Master"/>
+    </comp>
+    <comp lib="0" loc="(190,230)" name="Clock">
+      <a name="label" val="Clock"/>
+    </comp>
+    <comp lib="0" loc="(190,170)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Data"/>
+    </comp>
+    <comp lib="1" loc="(310,230)" name="NOT Gate"/>
+    <comp loc="(420,170)" name="D-Latch">
+      <a name="label" val="D-Slave"/>
+    </comp>
+    <comp lib="6" loc="(401,375)" name="Text">
+      <a name="text" val="(negative edge trigger), Y propagates to Q, since D-Slave is now enabled,"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="6" loc="(297,394)" name="Text">
+      <a name="text" val="and no further changes to Data will affect Q"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(480,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Q"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
 </project>
