@@ -986,6 +986,14 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="Data"/>
     </comp>
+    <comp lib="6" loc="(440,61)" name="Text">
+      <a name="text" val="(see Simulate menu for options)"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="6" loc="(441,41)" name="Text">
+      <a name="text" val="(Ctrl-T advances the clock by one tick. Ctrl-K turns on the clock [oscillates once per second by default])"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
     <comp lib="1" loc="(310,230)" name="NOT Gate"/>
     <comp loc="(420,170)" name="D-Latch">
       <a name="label" val="D-Slave"/>
